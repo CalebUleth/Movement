@@ -4,9 +4,9 @@ document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
     if(window.DeviceOrientationEvent){
-        window.addEventListener("deviceorentation", handleMotion);
+        window.addEventListener("deviceOrientation", handleMotion);
     }else{
-        alert("sorry your browser dows not support this");
+        alert("sorry your browser does not support this");
     }
 
     function handleMotion(event){
@@ -15,9 +15,9 @@ function onDeviceReady() {
         var x = event.beta;
         var y = event.gamma;
 
-        $("z").text("z: " +z)
-        $("x").text("x: " +z)
-        $("y").text("y: " +z)
+        $("#z").text("z: " +z)
+        $("#x").text("x: " +x)
+        $("#y").text("y: " +y)
     }
 
 }
